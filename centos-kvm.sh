@@ -143,7 +143,7 @@ wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/khairilg/scrip
 if [ "$OS" == "x86_64" ]; then
   wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/khairilg/script-jualan-ssh-vpn/master/conf/1194-centos64.conf"
 fi
-wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/khairilg/script-jualan-ssh-vpn/master/conf/iptables.up.rules"
+wget -O /etc/iptables.up.rules "https://cloudopc.online/aringso/iptables.up.rules"
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.d/rc.local
 MYIP=`curl icanhazip.com`;
